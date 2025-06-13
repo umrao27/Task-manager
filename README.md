@@ -20,14 +20,49 @@ This project is a full-stack task management application designed to showcase en
 
 ```bash
 project-root/
-├── client/                    # React frontend (UI + API consumption)
-├── server/                    # Express backend (API + DB interaction)
-├── tests/                     # Unit and end-to-end tests
-├── sql/                       # DB schema and seed data
-├── .vscode/                   # Debug and workspace settings
-├── Jenkinsfile                # CI pipeline config
-├── sonar-project.properties  # SonarQube config
-├── README.md                  # Project overview
+├── client/
+├── ├──public/          # Static assets (HTML, favicon, etc.)
+├── ├──src/             # Main application code
+│     ├── assets/      # Images, fonts, styles
+│     ├── components/  # Reusable UI components
+│     ├── pages/       # Route-based pages
+│     ├── features/    # Feature-specific modules (e.g., auth, dashboard)
+│     ├── hooks/       # Custom React hooks
+│     ├── layouts/     # Page layout components
+│     ├── routes/      # Route definitions
+│     ├── services/    # API calls and data services
+│     ├── store/       # Global state management (Redux/Zustand/Context)
+│     ├── utils/       # Utility functions
+│     ├── App.jsx      # Root component
+│     └── main.jsx     # Entry point (ReactDOM.createRoot)
+├── ├──tests/           # Test setup and utilities
+│     └── e2e/         # Write cypress tests
+├── .env             # Environment variables
+├── package.json     # Project dependencies and scripts
+└── README.md
+
+├── server/
+├── src/
+│   ├── config/            # Configuration files (env vars, DB configs, etc.)
+│   ├── controllers/       # Route logic (handles incoming requests)
+│   ├── routes/            # Express route definitions
+│   ├── models/            # Database models (Mongoose/Sequelize etc.)
+│   ├── middlewares/       # Custom Express middlewares (e.g., auth, error handler)
+│   ├── services/          # Business logic (e.g., userService.js)
+│   ├── utils/             # Helper utilities (e.g., token generators, logger)
+│   ├── validations/       # Request schema validations (e.g., with Joi or Zod)
+│   ├── jobs/              # Cron jobs or background tasks
+│   ├── app.js             # Express app configuration
+│   └── server.js          # Entry point: starts the server
+│
+├── tests/                 # Unit and integration tests
+│
+├── .env                   # Environment variables
+├── .gitignore
+├── package.json
+├── README.md
+└── sonar-project.properties  # SonarQube config (if used)
+├── README.md           # project Description
 ```
 
 ---
