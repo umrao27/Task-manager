@@ -148,12 +148,3 @@ This application follows a Layered Architecture with modular separation between 
 - Modular design supports scalability and future micro-frontend split
 
 ---
-
-## ✅ Ready for Demo / Interview Use
-
-This architecture demonstrates:
-
-- Clean code organization
-- CI/CD skills
-- Production-readiness concepts
-- Front-to-back understanding of app delivery
