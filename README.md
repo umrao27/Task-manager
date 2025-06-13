@@ -18,16 +18,7 @@ This project is a full-stack task management application designed to showcase en
 
 ## 📂 Folder Structure (High Level)
 
-project-root/
-├── client/ # React frontend (UI + API consumption)
-├── server/ # Express backend (API + DB interaction)
-├── tests/ # Unit and end-to-end tests
-├── sql/ # DB schema and seed data
-├── .vscode/ # Debug and workspace settings
-├── Jenkinsfile # CI pipeline config
-├── sonar-project.properties# SonarQube config
-├── README.md # Project overview
-├── ARCHITECTURE.md # You are here
+<pre><code>```bash project-root/ ├── client/ # React frontend (UI + API consumption) ├── server/ # Express backend (API + DB interaction) ├── tests/ # Unit and end-to-end tests ├── sql/ # DB schema and seed data ├── .vscode/ # Debug and workspace settings ├── Jenkinsfile # CI pipeline config ├── sonar-project.properties # SonarQube config ├── README.md # Project overview ``` </code></pre>
 
 ---
 
