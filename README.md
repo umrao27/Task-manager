@@ -1,10 +1,10 @@
 # 📘 ARCHITECTURE OVERVIEW
 
-## 📌 Project Name: Task Manager – Full Stack CRUD Application
+### 📌 Project Name: Task Manager – Full Stack CRUD Application
 
 ---
 
-## 🧱 Overview
+### 🧱 Overview
 
 This project is a full-stack task management application designed to showcase end-to-end delivery practices, including:
 
@@ -16,7 +16,7 @@ This project is a full-stack task management application designed to showcase en
 
 ---
 
-## 📂 Folder Structure (High Level)
+### 📂 Folder Structure (High Level)
 
 ```bash
 project-root/
@@ -67,7 +67,7 @@ project-root/
 
 ---
 
-## 🖼️ Architectural Pattern
+### 🖼️ Architectural Pattern
 
 This application follows a Layered Architecture with modular separation between concerns:
 
@@ -81,7 +81,7 @@ This application follows a Layered Architecture with modular separation between 
 
 ---
 
-## 🧪 Testing
+### 🧪 Testing
 
 | Layer           | Tool Used             |
 | --------------- | --------------------- |
@@ -91,7 +91,7 @@ This application follows a Layered Architecture with modular separation between 
 
 ---
 
-## 🔄 CI/CD & DevOps
+### 🔄 CI/CD & DevOps
 
 - **CI**: Jenkins pipeline runs lint, unit tests, E2E tests, and builds
 - **Code Quality**: Integrated with SonarQube via `sonar-project.properties`
@@ -100,7 +100,7 @@ This application follows a Layered Architecture with modular separation between 
 
 ---
 
-## 🗄️ Database
+### 🗄️ Database
 
 - **SQL Server** used for persistent storage
 - Schema includes `tasks`, and optionally `users`
@@ -108,7 +108,7 @@ This application follows a Layered Architecture with modular separation between 
 
 ---
 
-## 🧰 Tech Stack
+### 🧰 Tech Stack
 
 | Area         | Stack                   |
 | ------------ | ----------------------- |
@@ -124,7 +124,7 @@ This application follows a Layered Architecture with modular separation between 
 
 ---
 
-## ⚙️ Key Project Flows
+### ⚙️ Key Project Flows
 
 1. **User opens dashboard**  
    → React fetches data from `/api/tasks`  
@@ -141,7 +141,7 @@ This application follows a Layered Architecture with modular separation between 
 
 ---
 
-## 📝 Notes
+### 📝 Notes
 
 - Environment configs are managed via `.env` files
 - Logging is centralized (console or log files)
