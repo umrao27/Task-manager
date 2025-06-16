@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import * as taskService from "./services/taskService";
+import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -27,7 +28,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Task Manager</h1>
       <TaskForm onSubmit={handleAdd} />
       <TaskList tasks={tasks} onDelete={handleDelete} onToggle={handleToggle} />
