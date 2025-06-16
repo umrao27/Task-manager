@@ -17,14 +17,9 @@ pipeline {
     }
 
     stage('Install Dependencies') {
-      stage('Install') {
-            steps {
-                sh 'node -v'
-                sh 'npm install'
-            }
-        }
       steps {
-        dir('backend') {
+        dir('server') {
+          sh 'node -v'
           sh 'npm install'
         }
       }
@@ -32,18 +27,20 @@ pipeline {
 
     stage('Run Tests') {
       steps {
-        dir('backend') {
-          // Optional: run Jest or Mocha tests
+        dir('server') {
+          // Uncomment if you have tests
           // sh 'npm test'
         }
       }
     }
 
-    stage('Deploy Backend') {
+    stage('Deploy') {
       steps {
         echo "Deploying backend..."
         // Example: restart server with pm2 or rsync files
-        // sh 'pm2 restart all'
+        // dir('server') {
+        //   sh 'pm2 restart all'
+        // }
       }
     }
   }

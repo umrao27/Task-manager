@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   tools {
-    nodejs "Node 24"  // Use your configured Node version in Jenkins
+    nodejs "Node 24" 
   }
 
   environment {
@@ -18,21 +18,21 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
-        dir('frontend') {
+        dir('client') {
           sh 'npm install'
         }
       }
     }
 
-    stage('Build Frontend') {
+    stage('Build') {
       steps {
-        dir('frontend') {
+        dir('client') {
           sh 'npm run build'
         }
       }
     }
 
-    stage('Deploy Frontend') {
+    stage('Deploy') {
       steps {
         echo "Deploying frontend..."
         // Example: scp dist/ to static web server
