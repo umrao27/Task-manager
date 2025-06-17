@@ -6,7 +6,8 @@ pipeline {
   }
 
   environment {
-    NODE_ENV = "production"
+    NODE_ENV = "production";
+    SONARQUBE_ENV= credentials('sonar-token');
   }
 
   stages {
@@ -21,6 +22,14 @@ pipeline {
         dir('server') {
           sh 'node -v'
           sh 'npm install'
+        }
+      }
+    }
+
+    stage('SonarQube Analysis') {
+      steps {
+        withSonarQubeEnv('SonarQube') {
+          sh "sonar-scanner -Dsonar.login=${SONARQUBE_ENV}"
         }
       }
     }

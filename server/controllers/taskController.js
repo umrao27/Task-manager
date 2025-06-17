@@ -7,6 +7,10 @@ exports.getTasks = (req, res) => {
 
 exports.createTask = (req, res) => {
   const { title } = req.body;
+  if (!title || typeof title !== 'string') {
+    return res.status(400).json({ message: 'Title is required and must be a string.' });
+  }
+
   const newTask = { id: idCounter++, title, completed: false };
   tasks.push(newTask);
   res.status(201).json(newTask);

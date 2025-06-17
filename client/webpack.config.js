@@ -11,6 +11,7 @@ export default {
     filename: 'bundle.js',
     publicPath: '/'
   },
+   devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx']
   },

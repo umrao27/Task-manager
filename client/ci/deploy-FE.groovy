@@ -2,11 +2,12 @@ pipeline {
   agent any
 
   tools {
-    nodejs "Node 24" 
+    nodejs "Node 24.2.0"
   }
 
   environment {
-    NODE_ENV = "production"
+    NODE_ENV = "production";
+    SONARQUBE_ENV= credentials('sonar-token');
   }
 
   stages {
@@ -19,7 +20,15 @@ pipeline {
     stage('Install Dependencies') {
       steps {
         dir('client') {
-          sh 'npm install'
+           sh 'npm ci'
+        }
+      }
+    }
+
+    stage('SonarQube Analysis') {
+      steps {
+        withSonarQubeEnv('SonarQube') {
+           sh "sonar-scanner -Dsonar.login=${SONARQUBE_ENV}"
         }
       }
     }
